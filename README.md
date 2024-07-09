@@ -40,6 +40,15 @@ This code belongs to: https://github.com/NVlabs/stylegan2-ada-pytorch
 
 
 
+# Ukiyo-e Face results
+
+![Alt Text](Ukei.png)
+
+
+# Nearest Neighbour Results results
+
+![Alt Text](Nearest Neighbour.png)
+
 
 
 
