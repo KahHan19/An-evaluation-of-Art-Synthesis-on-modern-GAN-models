@@ -44,11 +44,16 @@ This code belongs to: https://github.com/NVlabs/stylegan2-ada-pytorch
 
 ![Alt Text](Ukei.png)
 
+Ukiyo-e Face results produced by our trained Model
+
 
 # Nearest Neighbour Results results
 
 ![Alt Text](NearestNeighbour.png)
 
+Results generated with our trained model: Images in red line is the real image,
+the 3 image surrounding the real image with red line from the right are the nearest neighbour
+generated image of the real image.
 
 
 
