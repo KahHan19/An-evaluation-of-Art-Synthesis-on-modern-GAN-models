@@ -47,7 +47,7 @@ This code belongs to: https://github.com/NVlabs/stylegan2-ada-pytorch
 
 # Nearest Neighbour Results results
 
-![Alt Text](Nearest Neighbour.png)
+![Alt Text](NearestNeighbour.png)
 
 
 
