@@ -18,6 +18,30 @@ generated art images.
 
 
 
+For downsize.py:
+
+The purpose of this code is to downsize the images and convert the colour mode of the images to RGB.
+
+1) Training set: This folder should include the dataset images you wish to train and make sure that the non of the images have alpha channel.
+2) Output Folder: This folder should be empty, this is where all the processed images will go.
+
+Remark: Make sure to run this code first to ensure all the images is the same size.
+
+
+For L2.py:
+
+1) Training set: This folder should include the dataset images you wish to train and make sure that the non of the images have alpha channel. Note that at this stage, the training set is the processed images that share the same size.
+
+2) Generate image output: This should contain the generated image that the model has produced. A sample image can be found within the .Zip folder.
+
+
+For stylegan2-ada-pytorch-main:
+This code belongs to: https://github.com/NVlabs/stylegan2-ada-pytorch
+
+
+
+
+
 
 
 
