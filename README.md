@@ -21,7 +21,9 @@ The purpose of this code is to downsize the images and convert the color mode of
 This code belongs to: [StyleGAN2-ADA PyTorch](https://github.com/NVlabs/stylegan2-ada-pytorch)
 
 ## Ukiyo-e Face Results
-![Ukiyo-e Face Results](Ukei.png)
+![Ukiyo-e Face ResultsI](Ukei.png)
+![Ukiyo-e Face Results II](nu/uki_res1.png)
+
 Ukiyo-e Face results produced by our trained model.
 
 ## Nearest Neighbour Results
