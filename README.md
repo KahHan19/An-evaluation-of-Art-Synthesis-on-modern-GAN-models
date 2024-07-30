@@ -7,14 +7,14 @@ Artificial Intelligence (AI) image synthesis is one of the most influential topi
 
 ### Ukiyo-e Augmentation Leakage Results
 <div align="center">
-  <img src="Ukei.png" alt="Ukiyo-e Face Results" width="400"/>
+  <img src="Ukei.png" alt="Ukiyo-e Face Results" width="300"/>
 </div>
 
 The generated results successfully display varying facial features. However, there appear to be some issues with augmentation leakage during the training of the dataset, as many of the resulting images have a pink theme. The generator tends to overfit to pictures with a pink theme because the loss for these images is the lowest, leading to color augmentations leaking into the generated results.
 
 ### Body Painting Struggles
 <div align="center">
-  <img src="nu/Trend.png" alt="Body Paint" width="400"/>
+  <img src="nu/Trend.png" alt="Body Paint" width="300"/>
 </div>
 
 The figure above showcases clear examples of the model struggling to generate images of the subject lying down. Interestingly, there is a noticeable trend in the generated images of the subject in this position. The feature circled in red in the figure is a common element present in most of the attempts to generate paintings with the subject lying down.
