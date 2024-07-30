@@ -2,15 +2,20 @@
 
 ## Abstract
 Artificial Intelligence (AI) image synthesis is one of the most influential topics in recent years, and Generative Adversarial Network (GAN) is undoubtedly one of the influential contributors to the progression of image synthesis. While there are many different variations of the GAN model that can synthesize high-quality images with very different components, the overall architecture still stays true to the GAN model of having a Generator (G) and a Discriminator (D). However, existing GAN image synthesis models that produce images from a noise image have neglected art synthesis as the amount of literature about GAN models that step into the field of art generation is very limited in terms of quantity. This paper will delve into the differences between real-life images, such as pictures of humans, birds, and cars, and art images, and utilize a modern image synthesis model, StyleGAN2-ADA PyTorch version, to evaluate the generated art images.
+
 ## Qualitative Evaluation
 
 ### Ukiyo-e Augmentation Leakage Results
-<img src="Ukei.png" alt="Ukiyo-e Face Results" width="400"/>
+<div style="text-align: center;">
+  <img src="Ukei.png" alt="Ukiyo-e Face Results" width="400"/>
+</div>
 
 The generated results successfully display varying facial features. However, there appear to be some issues with augmentation leakage during the training of the dataset, as many of the resulting images have a pink theme. The generator tends to overfit to pictures with a pink theme because the loss for these images is the lowest, leading to color augmentations leaking into the generated results.
 
 ### Body Painting Struggles
-<img src="nu/Trend.png" alt="Body Paint" width="400"/>
+<div style="text-align: center;">
+  <img src="nu/Trend.png" alt="Body Paint" width="400"/>
+</div>
 
 The figure above showcases clear examples of the model struggling to generate images of the subject lying down. Interestingly, there is a noticeable trend in the generated images of the subject in this position. The feature circled in red in the figure is a common element present in most of the attempts to generate paintings with the subject lying down.
 
