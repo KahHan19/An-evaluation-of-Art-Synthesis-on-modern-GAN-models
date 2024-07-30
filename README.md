@@ -22,8 +22,10 @@ The figure above showcases clear examples of the model struggling to generate im
 ### Body Painting Results
 <table>
   <tr>
+    <div align="center">
     <td><img src="nu/BadRes.png" alt="Body Paint" width="400"/></td>
     <td><img src="nu/nures.png" alt="Body Paint" width="400"/></td>
+    </div>
   </tr>
 </table>
 
