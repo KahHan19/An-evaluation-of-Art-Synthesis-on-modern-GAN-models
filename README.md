@@ -20,48 +20,30 @@ The purpose of this code is to downsize the images and convert the color mode of
 ### stylegan2-ada-pytorch-main
 This code belongs to: [StyleGAN2-ADA PyTorch](https://github.com/NVlabs/stylegan2-ada-pytorch)
 
+## Qualitative Evaluation
 
-# Qualitative Evaluation
+### Ukiyo-e Face Results
+![Ukiyo-e Face Results](figures/Ukei.png)
 
-## Ukiyo-e Face Results
-![Ukiyo-e Face ResultsI](Ukei.png)
+The figure above showcases the results of our model trained with Ukiyo-e Faces, as shown in the results at an FID of 71.93. The result seems to have successfully generated results with varying facial features. Most of the results also successfully learn to generate all of the facial features without missing an eye or a lip. But there are some examples with very distorted faces. However, there seem to have some augmentation leakages when it comes to the training of this dataset, as most of the results produced have a pink theme to the images. In the early stages of training, another strange augmentation seems to have leaked into the generator, causing all the generated results to have the same augmentation.
 
-Figure above showcase the results of our model trained with Ukiyo-e Faces, as shown in the
-results at an FID of 71.93. The result seems to have successfully generated results with varying
-facial features. Most of the results also successfully learn to generate all of the facial features
-without missing an eye or a lip. But there are some of the examples with very distorted faces.
-However, there seem to have some augmentation leakages when it comes to the training of
-this dataset, as most of the results produced have a pink theme to the images. In the early
-stages of training, another strange augmentation seems to have leaked into the generator,
-causing all the generated results to have the same augmentation.
-Figure 4.3: Augmentation Leakage
+### Body Painting Results
+![Body Paint](figures/BadRes.png)
+![Body Paint](figures/nures.png)
+![Body Paint](figures/Trend.png)
 
+The figure above showcases some of the more obvious examples of the model struggling to generate images of the subject lying down. Interestingly, there is a trend in the generated image lying down. The feature circled red in the figure is a common feature that is present in most of the attempts to learn paintings with the subject lying down.
 
-![Ukiyo-e Face Results II](nu/uki_res1.png)
-
-
-
-## Body Painting Results
-![Body Paint](nu/BadRes.png)
-![Body Paint](nu/nures.png)
-
-
-![Body Paint](nu/Trend.png)
-
-The figure above showcases some of the more obvious examples of the model struggling to generate images of the subject lying down. Interestingly, there is a trend in the generated image lying down. The feature circled red in figure is a common feature that is present in most of the attempts to learn paintings with the subject lying down. 
-
-
-
-
-## Nearest Neighbour Results
-![Nearest Neighbour Results](nu/KNN.png)
+### Nearest Neighbour Results
+![Nearest Neighbour Results](figures/KNN.png)
 Results generated with our trained model: Images in the red line are the real images, the 3 images surrounding the real image with the red line from the right are the nearest neighbour generated images of the real image.
 
 ## Citation
-```bibtex
+\`\`\`bibtex
 @inproceedings{Karras2020ada,
   title     = {Training Generative Adversarial Networks with Limited Data},
   author    = {Tero Karras and Miika Aittala and Janne Hellsten and Samuli Laine and Jaakko Lehtinen and Timo Aila},
   booktitle = {Proc. NeurIPS},
   year      = {2020}
 }
+\`\`\`
