@@ -20,14 +20,14 @@ The generated results successfully display varying facial features. However, the
 The figure above showcases clear examples of the model struggling to generate images of the subject lying down. Interestingly, there is a noticeable trend in the generated images of the subject in this position. The feature circled in red in the figure is a common element present in most of the attempts to generate paintings with the subject lying down.
 
 ### Body Painting Results
-<table>
-  <tr>
-    <div align="center">
-    <td><img src="nu/BadRes.png" alt="Body Paint" width="400"/></td>
-    <td><img src="nu/nures.png" alt="Body Paint" width="400"/></td>
-    </div>
-  </tr>
-</table>
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="nu/BadRes.png" alt="Body Paint" width="400"/></td>
+      <td><img src="nu/nures.png" alt="Body Paint" width="400"/></td>
+    </tr>
+  </table>
+</div>
 
 As shown above, the progression of the dataset trained with the model is evident. Initially, the model tends to generate brighter paintings that lack many details and body shape. Over time, it starts producing pictures with a darker theme, incorporating better details and body features, demonstrating significant improvements.
 
@@ -38,9 +38,11 @@ As shown above, the progression of the dataset trained with the model is evident
 
 
 ### Nearest Neighbour Results
+
 <div align="center">
-  <img src="nu/KNN" alt="Body Paint" width="300"/>
+  <img src="nu/KNN.png" alt="Body Paint" width="300"/>
 </div>
+
 Results generated with our trained model: Images in the red line are the real images, the 3 images surrounding the real image with the red line from the right are the nearest neighbour generated images of the real image.
 
 
