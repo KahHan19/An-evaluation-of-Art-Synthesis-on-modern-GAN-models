@@ -60,7 +60,7 @@ The progression in image quality from the dataset trained model is evident. Init
 
 ### Fréchet Inception Distance (FID) Results
 <div align="center">
-  <img src="nu/FID.png" alt="FID Results" width="400"/>
+  <img src="nu/FID.png" alt="FID Results" width="600"/>
 </div>
 
 Fréchet Inception Distance (FID) is used to quantitatively assess image quality by measuring the difference between feature distributions of real and generated images. A lower FID score indicates better image quality and closer alignment between real and generated images.
