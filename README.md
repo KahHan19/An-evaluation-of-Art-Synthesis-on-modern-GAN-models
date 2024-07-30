@@ -23,8 +23,8 @@ The figure above showcases clear examples of the model struggling to generate im
 <div align="center">
   <table>
     <tr>
-      <td><img src="nu/BadRes.png" alt="Body Paint" width="400"/></td>
-      <td><img src="nu/nures.png" alt="Body Paint" width="400"/></td>
+      <td><img src="nu/BadRes.png" alt="Body Paint" width="300"/></td>
+      <td><img src="nu/nures.png" alt="Body Paint" width="300"/></td>
     </tr>
   </table>
 </div>
@@ -40,7 +40,7 @@ As shown above, the progression of the dataset trained with the model is evident
 ### Nearest Neighbour Results
 
 <div align="center">
-  <img src="nu/KNN.png" alt="Body Paint" width="300"/>
+  <img src="nu/KNN.png" alt="Body Paint" width="400"/>
 </div>
 
 Results generated with our trained model: Images in the red line are the real images, the 3 images surrounding the real image with the red line from the right are the nearest neighbour generated images of the real image.
