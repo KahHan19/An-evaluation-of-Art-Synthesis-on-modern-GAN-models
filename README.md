@@ -38,7 +38,9 @@ As shown above, the progression of the dataset trained with the model is evident
 
 
 ### Nearest Neighbour Results
-![Nearest Neighbour Results](nu/KNN.png)
+<div align="center">
+  <img src="nu/KNN" alt="Body Paint" width="300"/>
+</div>
 Results generated with our trained model: Images in the red line are the real images, the 3 images surrounding the real image with the red line from the right are the nearest neighbour generated images of the real image.
 
 
