@@ -28,7 +28,7 @@ This code belongs to: [StyleGAN2-ADA PyTorch](https://github.com/NVlabs/stylegan
 The figure above showcases the results of our model trained with Ukiyo-e Faces, as shown in the results at an FID of 71.93. The result seems to have successfully generated results with varying facial features. Most of the results also successfully learn to generate all of the facial features without missing an eye or a lip. But there are some examples with very distorted faces. However, there seem to have some augmentation leakages when it comes to the training of this dataset, as most of the results produced have a pink theme to the images. In the early stages of training, another strange augmentation seems to have leaked into the generator, causing all the generated results to have the same augmentation.
 
 ### Body Painting Results
-![Body Paint](nu/BadRes.png)
+![Body Paint](nu\BadRes.png)
 ![Body Paint](nu/nures.png)
 ![Body Paint](nu/Trend.png)
 
