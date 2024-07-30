@@ -6,14 +6,14 @@ Artificial Intelligence (AI) image synthesis is one of the most influential topi
 ## Qualitative Evaluation
 
 ### Ukiyo-e Augmentation Leakage Results
-<div style="text-align: center;">
+<div align="center">
   <img src="Ukei.png" alt="Ukiyo-e Face Results" width="400"/>
 </div>
 
 The generated results successfully display varying facial features. However, there appear to be some issues with augmentation leakage during the training of the dataset, as many of the resulting images have a pink theme. The generator tends to overfit to pictures with a pink theme because the loss for these images is the lowest, leading to color augmentations leaking into the generated results.
 
 ### Body Painting Struggles
-<div style="text-align: center;">
+<div align="center">
   <img src="nu/Trend.png" alt="Body Paint" width="400"/>
 </div>
 
