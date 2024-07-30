@@ -32,14 +32,16 @@ This code belongs to: [StyleGAN2-ADA PyTorch](https://github.com/NVlabs/stylegan
 
 
 ## Body Painting Results
-
+![Body Paint](nu/Trend.png)
+![Body Paint](nu/BadRes.png)
+![Body Paint](nu/nures.png)
 
 
 
 
 
 ## Nearest Neighbour Results
-![Nearest Neighbour Results](NearestNeighbour.png)
+![Nearest Neighbour Results](KNN.png)
 Results generated with our trained model: Images in the red line are the real images, the 3 images surrounding the real image with the red line from the right are the nearest neighbour generated images of the real image.
 
 ## Citation
