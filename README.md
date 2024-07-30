@@ -1,12 +1,24 @@
 # An Evaluation of Art Synthesis on Modern GAN Models
 
+The content below summarizes the original work. For the full details, please refer to: [Link to PDF](nu/chia_khc_dissertation_2022_23.pdf)
 
-The content below are just a summary of the origianl work, if interested please refer to: [Link to PDF](nu/chia_khc_dissertation_2022_23.pdf)
-
-
+## Table of Contents
+1. [Abstract](#abstract)
+2. [Qualitative Evaluation](#qualitative-evaluation)
+   - [Ukiyo-e Augmentation Leakage Results](#ukiyo-e-augmentation-leakage-results)
+   - [Body Painting Struggles](#body-painting-struggles)
+   - [Body Painting Results](#body-painting-results)
+3. [Quantitative Results](#quantitative-results)
+   - [Nearest Neighbour Results](#nearest-neighbour-results)
+   - [Fréchet Inception Distance (FID) Results](#frechet-inception-distance-fid-results)
+4. [Code Information](#code-information)
+   - [downsize.py](#downsizepy)
+   - [L2.py](#l2py)
+   - [stylegan2-ada-pytorch-main](#stylegan2-ada-pytorch-main)
+5. [Citation](#citation)
 
 ## Abstract
-Artificial Intelligence (AI) image synthesis is one of the most influential topics in recent years, and Generative Adversarial Network (GAN) is undoubtedly one of the influential contributors to the progression of image synthesis. While there are many different variations of the GAN model that can synthesize high-quality images with very different components, the overall architecture still stays true to the GAN model of having a Generator (G) and a Discriminator (D). However, existing GAN image synthesis models that produce images from a noise image have neglected art synthesis as the amount of literature about GAN models that step into the field of art generation is very limited in terms of quantity. This paper will delve into the differences between real-life images, such as pictures of humans, birds, and cars, and art images, and utilize a modern image synthesis model, StyleGAN2-ADA PyTorch version, to evaluate the generated art images.
+Artificial Intelligence (AI) image synthesis has become a prominent field in recent years, with Generative Adversarial Networks (GANs) playing a significant role in its advancement. Although GAN models can generate high-quality images with various components, they generally adhere to the classic GAN architecture consisting of a Generator (G) and a Discriminator (D). Despite their success in creating realistic images, there is limited literature on GAN models specifically for art generation. This paper explores the differences between real-world images (such as those of humans, birds, and cars) and art images, using the modern StyleGAN2-ADA PyTorch model to evaluate the quality of generated art.
 
 ## Qualitative Evaluation
 
@@ -15,14 +27,14 @@ Artificial Intelligence (AI) image synthesis is one of the most influential topi
   <img src="Ukei.png" alt="Ukiyo-e Face Results" width="300"/>
 </div>
 
-The generated results successfully display varying facial features. However, there appear to be some issues with augmentation leakage during the training of the dataset, as many of the resulting images have a pink theme. The generator tends to overfit to pictures with a pink theme because the loss for these images is the lowest, leading to color augmentations leaking into the generated results.
+The generated images successfully display a variety of facial features. However, there are issues with augmentation leakage during dataset training, leading to a predominant pink theme in the results. The generator tends to overfit to images with a pink theme due to lower loss values, causing color augmentations to affect the generated results.
 
 ### Body Painting Struggles
 <div align="center">
   <img src="nu/Trend.png" alt="Body Paint" width="300"/>
 </div>
 
-The figure above showcases clear examples of the model struggling to generate images of the subject lying down. Interestingly, there is a noticeable trend in the generated images of the subject in this position. The feature circled in red in the figure is a common element present in most of the attempts to generate paintings with the subject lying down.
+The figure illustrates the model's difficulty in generating images of the subject lying down. A noticeable trend in these generated images is the recurring feature circled in red, which appears in most attempts to depict the subject in a reclining position.
 
 ### Body Painting Results
 <div align="center">
@@ -34,68 +46,49 @@ The figure above showcases clear examples of the model struggling to generate im
   </table>
 </div>
 
-As shown above, the progression of the dataset trained with the model is evident. Initially, the model tends to generate brighter paintings that lack many details and body shape. Over time, it starts producing pictures with a darker theme, incorporating better details and body features, demonstrating significant improvements.
+The progression in image quality from the dataset trained model is evident. Initially, the model produces brighter paintings with less detail and body shape. Over time, it generates images with a darker theme, improved detail, and more defined body features, showing significant enhancement.
 
-
-
-
-# Quantitative Results
-
+## Quantitative Results
 
 ### Nearest Neighbour Results
-
 <div align="center">
-  <img src="nu/KNN.png" alt="Body Paint" width="400"/>
+  <img src="nu/KNN.png" alt="Nearest Neighbour Results" width="400"/>
 </div>
 
-- Results generated with our trained model: Images in red line is the real image, the 3 image surrounding the real image with red line from the right are the nearest neighbour generated image of the real image.
-- 2 Distance measurements between real and generated images, Real image 1 is the most left image with a red box surrounding it.
+- Results from our trained model: The red-bordered image is the real image, while the three images surrounding it on the right are the nearest neighbors generated by the model.
+- Distance measurements between real and generated images are shown, with the real image 1 being the leftmost image with a red box around it.
 
-### Fréchet Inception Distance(FID) Results
+### Fréchet Inception Distance (FID) Results
 <div align="center">
-  <img src="nu/FID" alt="Body Paint" width="400"/>
+  <img src="nu/FID.png" alt="FID Results" width="400"/>
 </div>
 
-FID (Fréchet Inception Distance) is commonly used to quantitatively assess the quality of images generated by image synthesis models. It measures the differences between the feature distributions of real images and generated images in a feature space. A lower FID score indicates higher image quality, as it reflects a closer match between the real and generated image distributions.
+Fréchet Inception Distance (FID) is used to quantitatively assess image quality by measuring the difference between feature distributions of real and generated images. A lower FID score indicates better image quality and closer alignment between real and generated images.
 
-As shown above, the Nude Painting (Body Painting) model has performed significantly better, as evidenced by a lower FID score, indicating superior image quality in its generated outputs.
-
-
-
-
-
+As demonstrated, the Nude Painting (Body Painting) model achieved a lower FID score, reflecting superior image quality in its generated outputs.
 
 ## Code Information
 
 ### downsize.py
-The purpose of this code is to downsize the images and convert the color mode of the images to RGB.
+This script downsizes images and converts them to RGB mode.
 
-1. **Training set:** This folder should include the dataset images you wish to train and make sure that none of the images have an alpha channel.
-2. **Output Folder:** This folder should be empty, this is where all the processed images will go.
+1. **Training set:** Includes the dataset images you wish to train, ensuring none have an alpha channel.
+2. **Output Folder:** Should be empty, as processed images will be saved here.
 
-
-**Remark:** Make sure to run this code first to ensure all the images are the same size.
+**Note:** Run this script first to standardize image sizes.
 
 ### L2.py
-1. **Training set:** This folder should include the dataset images you wish to train and make sure that none of the images have an alpha channel. Note that at this stage, the training set is the processed images that share the same size.
-2. **Generate image output:** This should contain the generated image that the model has produced. A sample image can be found within the .Zip folder.
+1. **Training set:** Includes the dataset images you wish to train, with all images standardized in size.
+2. **Generate image output:** Contains the generated images from the model. A sample image can be found within the .zip folder.
 
 ### stylegan2-ada-pytorch-main
-This code belongs to: [StyleGAN2-ADA PyTorch](https://github.com/NVlabs/stylegan2-ada-pytorch)
-
-
-
-
-
-
-
+This code is from: [StyleGAN2-ADA PyTorch](https://github.com/NVlabs/stylegan2-ada-pytorch)
 
 ## Citation
-\`\`\`bibtex
+```bibtex
 @inproceedings{Karras2020ada,
   title     = {Training Generative Adversarial Networks with Limited Data},
   author    = {Tero Karras and Miika Aittala and Janne Hellsten and Samuli Laine and Jaakko Lehtinen and Timo Aila},
   booktitle = {Proc. NeurIPS},
   year      = {2020}
 }
-\`\`\`
